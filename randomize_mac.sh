@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo ifconfig wlp3s0 down
+sudo macchanger -r wlp3s0
+sudo ifconfig wlp3s0 up
+
