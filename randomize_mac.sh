@@ -37,6 +37,6 @@ shift $(($OPTIND - 1))
 
 echo "Randomizing MAC address on $DEVICE..."
 sudo ifconfig "$DEVICE" down
-sudo macchanger -r wlp3s0
+sudo macchanger -r "$DEVICE"
 sudo ifconfig "$DEVICE" up
 
