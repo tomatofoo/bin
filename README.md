@@ -1,2 +1,7 @@
 # bin
-personal ~/bin scripts
+Personal ~/bin scripts. These are not guaranteed to work on all systems.
+
+## Scripts
+- [battery.sh] - utility for limiting battery percentage
+- [randomize_mac.sh] - randomize mac address using macchanger
+
