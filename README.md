@@ -1,5 +1,5 @@
 # bin
-Personal ~/bin scripts. These are not guaranteed to work on all systems.
+Personal ~/bin scripts. Use these at your own risk.
 
 ## Scripts
 - [battery.sh](/battery.sh) - utility for limiting battery percentage
