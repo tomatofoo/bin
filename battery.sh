@@ -9,7 +9,7 @@ options:
     -h    show this help
 
 commands:
-    help               show this help
+    help                   show this help
 
     set                    set the percentage threshold
         options:
