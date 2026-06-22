@@ -41,7 +41,7 @@ while getopts ":h" opt; do
         *)
             opt_error "$OPTARG"
             echo "$PREHELP"
-            exit
+            exit 1
             ;;
     esac
 done
@@ -74,7 +74,7 @@ while getopts ":$OPTS" opt; do
         *)
             opt_error $OPTARG
             echo "$PREHELP"
-            exit
+            exit 1
             ;;
     esac
 done
@@ -98,7 +98,7 @@ while getopts ":$OPTS" opt; do
         *)
             opt_error $OPTARG
             echo "$PREHELP"
-            exit
+            exit 1
             ;;
     esac
 done

@@ -29,7 +29,7 @@ while getopts ":hd:" opt; do
         *)
             opt_error "$OPTARG"
             echo "$PREHELP"
-            exit
+            exit 1
             ;;
     esac
 done
