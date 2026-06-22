@@ -8,7 +8,6 @@ HELP="Usage: $NAME [OPTIONS]
 options:
     -h             show this help
     -d <device>    set which device to use (default wlp3s0)
-
 "
 
 opt_error() {
