@@ -7,6 +7,7 @@ HELP="Usage: $NAME [OPTIONS]
 
 options:
     -h             show this help
+    -p             reset MAC address to hardware address
     -d <device>    set which device to use (default wlp3s0)
 "
 
@@ -15,12 +16,18 @@ opt_error() {
 }
 
 
+PREFIX="Randomizing"
+OPTS="-r"
 DEVICE="wlp3s0"
-while getopts ":hd:" opt; do
+while getopts ":hpd:" opt; do
     case "$opt" in 
         "h")
             echo "$HELP"
             exit
+            ;;
+        "p")
+            PREFIX="Resetting"
+            OPTS="-p"
             ;;
         "d")
             DEVICE="$OPTARG"
@@ -34,8 +41,8 @@ while getopts ":hd:" opt; do
 done
 shift $(($OPTIND - 1))
 
-echo "Randomizing MAC address on $DEVICE..."
+echo "$PREFIX MAC address on $DEVICE..."
 sudo ifconfig "$DEVICE" down
-sudo macchanger -r "$DEVICE"
+sudo macchanger "$OPTS" "$DEVICE"
 sudo ifconfig "$DEVICE" up
 
